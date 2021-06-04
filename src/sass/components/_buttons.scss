@@ -1,0 +1,15 @@
+.button {
+  text-decoration: none;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5em 5em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

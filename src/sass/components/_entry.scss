@@ -1,0 +1,25 @@
+.entry {
+  &-cart {
+    border-radius: 1em;
+    padding: 2.125em 2.875em;
+  }
+
+  &-meta {
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &-title {
+    font-size: 2em;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  &-excerpt {
+    p {
+      font-size: 1.125em;
+      line-height: 1.3;
+    }
+  }
+}

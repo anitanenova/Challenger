@@ -1,0 +1,10 @@
+// This file contains all application-wide Sass mixins.
+
+$n: 10;
+
+@for $i from 1 through $n {
+  .followers-wrapper .menu .list-item:nth-child(#{$i}) {
+    position: relative;
+    right: $i * 1.125em;
+  }
+}
