@@ -6,22 +6,23 @@
 @import "utils/breakpoints";
 @import "utils/border-radius";
 @import "utils/shadows";
+@import "utils/colors";
 
 // 3. Base
 @import "base/typography";
 @import "base/normalize";
-@import "base/sections";
 @import "base/fonts";
 
 // 4. Layout
 @import "layout/header";
-@import "layout/main";
+@import "layout/footer";
 
 // 5. Components
 @import "components/buttons";
 @import "components/sections";
 @import "components/entry";
 @import "components/followers";
+@import "components/card";
 
 // 6. Vendors
 // sass-lint:disable

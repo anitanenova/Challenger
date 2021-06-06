@@ -1,6 +1,4 @@
 .button {
-  text-decoration: none;
-  display: inline-block;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,8 +6,18 @@
   padding: 1.5em 5em;
   font-weight: 700;
   text-transform: uppercase;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
 
   &:hover {
     cursor: pointer;
+  }
+
+  &-muted {
+    color: var(--color-muted);
+    background-color: var(--color-white);
+    border: 3px solid var(--color-muted);
+    box-shadow: $shadow-primary;
   }
 }

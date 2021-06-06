@@ -1,10 +1,15 @@
 // This file contains all application-wide Sass mixins.
 
-$n: 10;
+@mixin content-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-@for $i from 1 through $n {
-  .followers-wrapper .menu .list-item:nth-child(#{$i}) {
-    position: relative;
-    right: $i * 1.125em;
-  }
+@mixin content-separated-horizontaly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -4,8 +4,10 @@
   max-height: 5.375em;
 
   position: fixed;
+  top: 0;
   z-index: 1;
   padding: 1.75em 2.375em;
+  background-color: var(--color-primary);
 
   display: flex;
   flex-direction: row;
@@ -34,6 +36,11 @@
         font-weight: 400;
         font-size: 1em;
         text-decoration: none;
+        color: var(--color-dark);
+
+        &:hover {
+          font-weight: 700;
+        }
       }
     }
   }

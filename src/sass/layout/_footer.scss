@@ -1,0 +1,13 @@
+.site-footer {
+  @include content-separated-horizontaly;
+
+  padding: 2.375em;
+
+  a {
+    color: var(--color-dark);
+  }
+
+  .footer-primary a {
+    text-decoration: none;
+  }
+}

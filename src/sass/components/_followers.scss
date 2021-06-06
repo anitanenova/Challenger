@@ -4,6 +4,8 @@
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
+    position: relative;
+    right: -2.125em;
   }
 
   .list-item,
@@ -14,29 +16,24 @@
   .list-item {
     width: 3.375em;
     height: 3.375em;
-    border: 3px solid white;
+    border: 3px solid var(--color-white);
 
-    &:first-child {
-      position: relative;
-      right: 0;
-    }
-
-    $n: 10;
-
+    $n: 5;
     @for $i from 1 through $n {
-      &:nth-child(#{$i}) {
-        position: relative;
-        right: $i * 1.125em;
+      &:nth-last-child(#{$i}) {
+        position: absolute;
+        right: $i * 2.125em;
       }
     }
 
     &:last-child {
       padding: 0.75em;
-      background-color: red;
+      background-color: var(--color-secondary-dark);
       p {
         margin: 0;
         font-weight: 700;
         font-size: 1.375em;
+        font-family: $font-primary;
       }
     }
   }
