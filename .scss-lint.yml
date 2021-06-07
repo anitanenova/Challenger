@@ -1,5 +1,4 @@
-exclude: './src/sass/vendors/**'
-
+exclude: "./src/sass/vendors/**"
 
 linters:
   BangFormat:
@@ -130,15 +129,35 @@ linters:
   PropertyUnits:
     enabled: true
     global: [
-      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
-      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
-      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
-      'fr',                                    # Grid fractional lengths
-      'deg', 'grad', 'rad', 'turn',            # Angle
-      'ms', 's',                               # Duration
-      'Hz', 'kHz',                             # Frequency
-      'dpi', 'dpcm', 'dppx',                   # Resolution
-      '%']                                     # Other
+        "ch",
+        "em",
+        "ex",
+        "rem", # Font-relative lengths
+        "cm",
+        "in",
+        "mm",
+        "pc",
+        "pt",
+        "px",
+        "q", # Absolute lengths
+        "vh",
+        "vw",
+        "vmin",
+        "vmax", # Viewport-percentage lengths
+        "fr", # Grid fractional lengths
+        "deg",
+        "grad",
+        "rad",
+        "turn", # Angle
+        "ms",
+        "s", # Duration
+        "Hz",
+        "kHz", # Frequency
+        "dpi",
+        "dpcm",
+        "dppx", # Resolution
+        "%",
+      ] # Other
     properties: {}
 
   PseudoElement:

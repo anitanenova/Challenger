@@ -19,8 +19,9 @@ h6,
   font-family: $font-primary;
 }
 
-p,a{
- font-family:  $font-secondary;
+p,
+a {
+  font-family: $font-secondary;
 }
 
 @each $header,
