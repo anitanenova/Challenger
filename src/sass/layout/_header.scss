@@ -44,4 +44,35 @@
       }
     }
   }
+
+  .menu-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: $breakpoint-normal) {
+    .menu-mobile {
+      display: block;
+      padding: 1em 0 1em 1em;
+      cursor: pointer;
+    }
+
+    .site-navigation {
+      position: absolute;
+      top: 5em;
+      left: 0;
+      background-color: var(--color-primary);
+
+      width: 100%;
+      z-index: 1;
+      transition: 0.5s;
+      transform: translateX(-100%);
+      .menu {
+        flex-direction: column;
+
+        &-item {
+          padding: 0.5em 1em;
+        }
+      }
+    }
+  }
 }

@@ -430,6 +430,28 @@ summary {
 .site-header .site-navigation .menu-item a:hover {
   font-weight: 700; }
 
+.site-header .menu-mobile {
+  display: none; }
+
+@media screen and (max-width: 48em) {
+  .site-header .menu-mobile {
+    display: block;
+    padding: 1em 0 1em 1em;
+    cursor: pointer; }
+  .site-header .site-navigation {
+    position: absolute;
+    top: 5em;
+    left: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translateX(-100%); }
+  .site-header .site-navigation .menu {
+    flex-direction: column; }
+  .site-header .site-navigation .menu-item {
+    padding: 0.5em 1em; } }
+
 .site-footer {
   display: flex;
   flex-direction: row;
@@ -495,13 +517,23 @@ summary {
 @media screen and (max-width: 48em) {
   .section-welcome .entry-featured,
   .section-welcome .section-heading {
-    max-width: calc(100% - 2em); } }
+    max-width: calc(100% - 4em); }
+  .section-welcome .section-heading {
+    margin-top: 3em; }
+  .section-welcome .section-heading .heading-title {
+    font-size: 1.5em;
+    text-align: center; } }
 
 .section-bg-separator {
   height: 12.5em;
   width: 100%;
   background-color: var(--color-primary);
   margin-top: 5.375em; }
+
+@media screen and (max-width: 48em) {
+  .section-bg-separator {
+    height: 10em;
+    margin-top: 5em; } }
 
 .section-votes {
   position: relative;
@@ -522,7 +554,11 @@ summary {
   margin-top: 1.375em; }
 
 .section-votes .vote-excerpt p {
-  margin: 0 0.875em 0 0; }
+  margin: 0 0 0 0.875em; }
+
+@media screen and (max-width: 48em) {
+  .section-votes {
+    top: -6em; } }
 
 .entry-card {
   border-radius: 1em;
@@ -549,6 +585,8 @@ summary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 2.875em; }
 
 @media screen and (max-width: 48em) {
@@ -557,13 +595,27 @@ summary {
   .entry-title {
     font-size: 1.5em; } }
 
+@media (max-width: 32.375em) {
+  .entry-featured-footer {
+    justify-content: center; }
+  .button-muted {
+    margin: 0 auto; } }
+
+.followers-wrapper {
+  width: 100%;
+  max-width: 12em;
+  margin-left: 2em; }
+
 .followers-wrapper .list {
   padding-left: 0;
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   position: relative;
-  right: -2.125em; }
+  right: -2.125em;
+  margin: 0;
+  width: 12em;
+  height: 3.25em; }
 
 .followers-wrapper .list-item,
 .followers-wrapper .follower-thumbnail {
@@ -608,6 +660,14 @@ summary {
   width: 100%;
   height: 100%;
   object-fit: cover; }
+
+@media (max-width: 32.375em) {
+  .followers-wrapper {
+    margin: 2em 0 0;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .followers-wrapper .list {
+    margin: 0 auto; } }
 
 .card {
   display: flex;

@@ -29,9 +29,8 @@
   }
 
   &-featured-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include content-separated-horizontaly;
+    flex-wrap: wrap;
     margin-top: 2.875em;
   }
 }
@@ -43,5 +42,15 @@
 
   .entry-title {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 32.375em) {
+  .entry-featured-footer {
+    justify-content: center;
+  }
+
+  .button-muted {
+    margin: 0 auto;
   }
 }

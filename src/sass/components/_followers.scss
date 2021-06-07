@@ -1,4 +1,8 @@
 .followers-wrapper {
+  width: 100%;
+  max-width: 12em;
+  margin-left: 2em;
+
   .list {
     padding-left: 0;
     list-style: none;
@@ -6,6 +10,9 @@
     flex-flow: row nowrap;
     position: relative;
     right: -2.125em;
+    margin: 0;
+    width: 12em;
+    height: 3.25em;
   }
 
   .list-item,
@@ -42,5 +49,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 32.375em) {
+    margin: 2em 0 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    .list {
+      margin: 0 auto;
+    }
   }
 }
