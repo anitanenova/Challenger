@@ -1421,3 +1421,6 @@ summary {
     margin-bottom: 1.875rem; }
   .column-block > :last-child {
     margin-bottom: 0; } }
+
+.site {
+  overflow-x: hidden; }
