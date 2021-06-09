@@ -1,5 +1,8 @@
 .site-footer {
-  @include content-separated-horizontaly;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 
   padding: 2.375em;
 

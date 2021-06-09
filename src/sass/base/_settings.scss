@@ -1,0 +1,25 @@
+// fonts
+$font-primary: "SF-Pro-Text", sans-serif;
+$font-secondary: "PT Serif", serif;
+
+// breakpoints
+$breakpoint-normal: 48em;
+
+// colors
+:root {
+  --color-primary: #f4d0ca;
+  --color-secondary: #ffeed3;
+  --color-secondary-dark: #ffc700;
+  --color-purple: #b4c4ff;
+  --color-white: #ffffff;
+  --color-dark: #000000;
+  --color-muted: rgba(0, 0, 0, 0.1);
+}
+
+//shadows
+$shadow-primary: 0.625em 0.625em 0 var(--color-muted);
+$shadow-secondary: 1.25em 1.25em 0 var(--color-dark);
+
+// border-radius
+$radius-primary: 1em;
+$radius-secondary: 0.5em;

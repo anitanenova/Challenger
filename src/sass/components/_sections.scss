@@ -3,32 +3,19 @@
 }
 
 .section-welcome {
+  padding-top: 10em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top: -8.625em;
+  background: linear-gradient(
+    0deg,
+    var(--color-white) 24em,
+    var(--color-primary) 0
+  );
 
   .entry-featured,
   .section-heading {
     max-width: 42.5em;
-  }
-
-  .section-heading {
-    margin-top: 6em;
-
-    .heading-title {
-      font-weight: 200;
-      font-family: $font-primary;
-      font-size: 3.375em;
-      text-transform: uppercase;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    span {
-      font-weight: 700;
-    }
   }
 
   @media screen and (max-width: $breakpoint-normal) {
@@ -45,22 +32,36 @@
       }
     }
   }
-}
 
-.section-bg-separator {
-  height: 12.5em;
-  width: 100%;
-  background-color: var(--color-primary);
-  margin-top: 5.375em;
-  @media screen and (max-width: $breakpoint-normal) {
-    height: 10em;
-    margin-top: 5em;
+  @media (max-width: 35.125em) {
+    padding-top: 8em;
+    background: linear-gradient(
+      0deg,
+      var(--color-white) 64%,
+      var(--color-primary) 0
+    );
   }
 }
 
 .section-votes {
-  position: relative;
-  top: -3.625em;
+  .section-heading {
+    text-align: center;
+    margin-top: 5.875em;
+    margin-bottom: 5em;
+
+    .heading-title {
+      font-weight: 200;
+      font-family: $font-primary;
+      font-size: 3.375em;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
 
   .card:not(:first-child) {
     margin-top: 1.375em;
@@ -90,6 +91,16 @@
   }
 
   @media screen and (max-width: $breakpoint-normal) {
-    top: -6em;
+    .section-heading {
+      margin: 3em 0;
+
+      .heading-title {
+        font-size: 2em;
+      }
+    }
+
+    .vote-excerpt {
+      justify-content: center;
+    }
   }
 }

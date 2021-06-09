@@ -2,17 +2,20 @@
   width: 100%;
   max-width: 12em;
   margin-left: 2em;
+  text-align: end;
+
+  .followers-meta {
+    font-weight: 700;
+    font-size: 0.875em;
+    margin-right: 0.375em;
+  }
 
   .list {
     padding-left: 0;
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
-    position: relative;
-    right: -2.125em;
     margin: 0;
-    width: 12em;
-    height: 3.25em;
   }
 
   .list-item,
@@ -24,18 +27,14 @@
     width: 3.375em;
     height: 3.375em;
     border: 3px solid var(--color-white);
-
-    $n: 5;
-    @for $i from 1 through $n {
-      &:nth-last-child(#{$i}) {
-        position: absolute;
-        right: $i * 2.125em;
-      }
-    }
+    margin-right: -1.25em;
 
     &:last-child {
-      padding: 0.75em;
       background-color: var(--color-secondary-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       p {
         margin: 0;
         font-weight: 700;
@@ -51,13 +50,14 @@
     object-fit: cover;
   }
 
-  @media (max-width: 32.375em) {
+  @media (max-width: 35em) {
     margin: 2em 0 0;
-    flex: 0 0 100%;
+    text-align: center;
     max-width: 100%;
 
     .list {
       margin: 0 auto;
+      width: fit-content;
     }
   }
 }

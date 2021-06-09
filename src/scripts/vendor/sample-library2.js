@@ -1,4 +1,4 @@
-const mobileMenu = document.querySelector(".menu-mobile");
+const mobileMenu = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-navigation");
 
 mobileMenu.addEventListener("click", function (e) {
