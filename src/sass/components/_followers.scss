@@ -55,9 +55,13 @@
     text-align: center;
     max-width: 100%;
 
+    .followers-meta {
+      margin-right: 0;
+    }
+
     .list {
-      margin: 0 auto;
-      width: fit-content;
+      padding-right: 1.25em;
+      justify-content: center;
     }
   }
 }

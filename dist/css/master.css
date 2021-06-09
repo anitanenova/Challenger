@@ -645,9 +645,11 @@ summary {
     margin: 2em 0 0;
     text-align: center;
     max-width: 100%; }
+  .followers-wrapper .followers-meta {
+    margin-right: 0; }
   .followers-wrapper .list {
-    margin: 0 auto;
-    width: fit-content; } }
+    padding-right: 1.25em;
+    justify-content: center; } }
 
 .card {
   padding: 3em;
