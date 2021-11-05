@@ -1,7 +1,7 @@
 .entry {
   &-card {
     border-radius: 1em;
-    padding: 2.125em 2.875em;
+    padding: 2.125em 2.75em;
     background-color: var(--color-purple);
     box-shadow: $shadow-secondary;
     border: 3px solid var(--color-dark);
@@ -16,6 +16,7 @@
   }
 
   &-title {
+    font-family: $font-secondary;
     font-size: 2em;
     line-height: 1.4;
     margin: 0;

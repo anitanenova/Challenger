@@ -3,12 +3,22 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  padding: 1.75em 2.375em;
   background-color: var(--color-primary);
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $site-with-default;
+    padding: 0 0.9375em;
+    height: $site-header-height;
+  }
+
+  &-placeholder {
+    width: 100%;
+    height: $site-header-height;
+  }
 
   .site-name {
     display: block;
@@ -49,7 +59,10 @@
   }
 
   @media screen and (max-width: $breakpoint-normal) {
-    padding: 0.75em 1.375em;
+    &-inner,
+    &-placeholder {
+      height: $site-header-mobile-height;
+    }
 
     .menu-toggle {
       display: block;
@@ -79,6 +92,13 @@
         padding: 1em 0;
         text-align: center;
       }
+    }
+  }
+
+  @media screen and (max-width: 40em) {
+    // this is because we want to have equal parring left right like the grid system and in this example we don't use row and column in header and footer
+    &-inner {
+      padding: 0 0.625em;
     }
   }
 }

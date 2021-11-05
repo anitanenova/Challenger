@@ -1,16 +1,31 @@
 .site-footer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  &-inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 
-  padding: 2.375em;
+    width: 100%;
+    max-width: $site-with-default;
+    padding: 2.375em 0.9375em;
+  }
 
   a {
     color: var(--color-dark);
   }
 
-  .footer-primary a {
-    text-decoration: none;
+  .footer-primary {
+    margin-right: 1em;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 40em) {
+    // this is because we want to have equal parring left right like the grid system and in this example we don't use row and column in header and footer
+    &-inner {
+      padding: 2.375em 0.625em;
+    }
   }
 }

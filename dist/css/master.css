@@ -396,11 +396,20 @@ summary {
   position: fixed;
   top: 0;
   z-index: 100;
-  padding: 1.75em 2.375em;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary); }
+
+.site-header-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  width: 100%;
+  max-width: 115.375em;
+  padding: 0 0.9375em;
+  height: 5.625em; }
+
+.site-header-placeholder {
+  width: 100%;
+  height: 5.625em; }
 
 .site-header .site-name {
   display: block;
@@ -433,8 +442,8 @@ summary {
   display: none; }
 
 @media screen and (max-width: 48em) {
-  .site-header {
-    padding: 0.75em 1.375em; }
+  .site-header-inner, .site-header-placeholder {
+    height: 4.375em; }
   .site-header .menu-toggle {
     display: block;
     padding: 1em 0 1em 1em;
@@ -456,18 +465,31 @@ summary {
     padding: 1em 0;
     text-align: center; } }
 
-.site-footer {
+@media screen and (max-width: 40em) {
+  .site-header-inner {
+    padding: 0 0.625em; } }
+
+.site-footer-inner {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 2.375em; }
+  width: 100%;
+  max-width: 115.375em;
+  padding: 2.375em 0.9375em; }
 
 .site-footer a {
   color: var(--color-dark); }
 
+.site-footer .footer-primary {
+  margin-right: 1em; }
+
 .site-footer .footer-primary a {
   text-decoration: none; }
+
+@media screen and (max-width: 40em) {
+  .site-footer-inner {
+    padding: 2.375em 0.625em; } }
 
 .button {
   font-size: 1.375em;
@@ -489,7 +511,7 @@ summary {
   width: 100%; }
 
 .section-welcome {
-  padding-top: 10em;
+  padding-top: 3.875em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -511,8 +533,8 @@ summary {
 
 @media (max-width: 35.125em) {
   .section-welcome {
-    padding-top: 8em;
-    background: linear-gradient(0deg, var(--color-white) 64%, var(--color-primary) 0); } }
+    padding-top: 2em;
+    background: linear-gradient(180deg, var(--color-primary) 25%, var(--color-white) 0); } }
 
 .section-votes .section-heading {
   text-align: center;
@@ -557,7 +579,7 @@ summary {
 
 .entry-card {
   border-radius: 1em;
-  padding: 2.125em 2.875em;
+  padding: 2.125em 2.75em;
   background-color: var(--color-purple);
   box-shadow: 1.25em 1.25em 0 var(--color-dark);
   border: 3px solid var(--color-dark);
@@ -568,6 +590,7 @@ summary {
   margin-top: 0; }
 
 .entry-title {
+  font-family: "PT Serif", serif;
   font-size: 2em;
   line-height: 1.4;
   margin: 0; }
@@ -680,6 +703,12 @@ summary {
   justify-content: center;
   align-items: center; }
 
+.card-primary-info {
+  flex: 0 0 20em;
+  width: 100%;
+  max-width: 20em;
+  justify-content: space-between; }
+
 .card-number-wrapper {
   margin-right: 2.75em; }
 
@@ -691,24 +720,38 @@ summary {
   height: 2em;
   margin-right: 0.75em; }
 
+.card-number-wrapper .card-arrow svg {
+  width: 1em;
+  height: 1em; }
+
 .card-number-wrapper .card-number {
   margin: 0;
   font-size: 2em;
   font-family: "SF-Pro-Text", sans-serif; }
 
+.card-info-wrapper {
+  width: 100%; }
+
 .card-info-wrapper .card-thumbnail-wrapper {
-  width: 3.375em;
-  height: 3.375em;
-  border-radius: 50%; }
+  position: relative;
+  height: 0;
+  width: 100%;
+  max-width: 3.375em;
+  padding-bottom: 25.5%; }
 
 .card-info-wrapper .card-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  aspect-ratio: 1/1;
   border-radius: 50%; }
 
 .card-info {
-  margin-left: 1.125em; }
+  margin-left: 1.125em;
+  width: 100%; }
 
 .card-info .card-title {
   margin: 0;
@@ -750,8 +793,6 @@ summary {
     flex-flow: wrap;
     justify-content: space-between;
     padding: 1.5em; }
-  .card-navigation .menu-item:first-child a {
-    padding-left: 0; }
   .card-navigation .menu-item a {
     padding-bottom: 0; }
   .card-info-wrapper,
@@ -762,7 +803,7 @@ summary {
     margin-left: 0;
     text-align: center; } }
 
-@media (max-width: 31.25em) {
+@media (max-width: 37.5em) {
   .card {
     justify-content: center; }
   .card .card-primary-info {
@@ -773,7 +814,10 @@ summary {
     max-width: 100%; }
   .card .card-number-wrapper {
     flex-direction: row;
-    margin: 0 0 1em 0; } }
+    margin: 0 0 1em 0; }
+  .card-info-wrapper .card-thumbnail-wrapper {
+    padding-bottom: 3.375em;
+    margin-bottom: 1em; } }
 
 /**
  * Foundation for Sites
